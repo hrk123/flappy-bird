@@ -1,0 +1,156 @@
+/* 统一居中样式 */
+
+.middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#game {
+    width: 100%;
+    height: 600px;
+    background-image: url('./images/sky.png');
+    overflow: hidden;
+    position: relative;
+}
+
+#game .bird {
+    width: 30px;
+    height: 30px;
+    background-image: url('./images/birds.png');
+    top: 235px;
+    transition: top .3s linear;
+}
+
+#game .start {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: 260px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+#game .start.white {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#game .start.blue {
+    font-size: 34px;
+    font-weight: bolder;
+    color: #09f;
+}
+
+#game .score {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+#game .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 600px;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    z-index: 2;
+}
+
+#game .mask .over {
+    color: #f00;
+    font-size: 35px;
+    font-weight: bolder;
+    top: 80px;
+}
+
+#game .mask .results {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff0;
+    top: 150px;
+}
+
+#game .mask .finalScore {
+    width: 30px;
+    height: 20px;
+    color: #ff0;
+    font-size: 24px;
+    font-weight: bold;
+    top: 200px;
+}
+
+#game .rank-list {
+    top: 258px;
+    color: #09f;
+    font-size: 14px;
+    display: none;
+    z-index: 2;
+}
+
+#game .rank-list .rank-item {
+    margin-bottom: 20px;
+}
+
+#game .rank-list .rank-item .rank {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #8eb9f5;
+    color: #fff;
+    line-height: 14px;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#game .rank-list .rank-item .num {
+    margin-right: 10px;
+}
+
+#game .restart {
+    font-size: 18px;
+    color: #09f;
+    font-weight: bolder;
+    top: 550px;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+.pillar {
+    width: 52px;
+    position: absolute;
+    display: inline-block;
+}
+
+.pillar_up {
+    background-image: url('./images/pipe2.png');
+    background-position-y: bottom;
+    top: 0;
+}
+
+.pillar_down {
+    background-image: url('./images/pipe1.png');
+    bottom: 0;
+}
+
+#game .rank-list .rank-item .first {
+    background-color: #f00;
+}
+
+#game .rank-list .rank-item .second {
+    background-color: orange;
+}
+
+#game .rank-list .rank-item .thirdly {
+    background-color: yellowgreen;
+}
